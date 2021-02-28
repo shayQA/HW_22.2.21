@@ -1,0 +1,28 @@
+package com.company;
+import org.junit.Test; // 4.12
+
+import static junit.framework.TestCase.assertEquals;
+
+public class CalculatorTest {
+
+    @Test
+    public void testAdd_small_numbers() {
+        Calculator calculator = new Calculator();
+
+        double actual_result = calculator.add(3, 4);
+        double expected_result = 7;
+        assertEquals(expected_result, actual_result);
+
+        actual_result = calculator.subtraction(3, 4);
+        expected_result = -1;
+        assertEquals(expected_result, actual_result);
+
+        actual_result = calculator.multiplication(3, 4);
+        expected_result = 12;
+        assertEquals(expected_result, actual_result);
+
+        actual_result = calculator.division(4, 2);
+        expected_result = 2;
+        assertEquals(expected_result, actual_result);
+    }
+}
