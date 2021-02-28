@@ -1,0 +1,32 @@
+package com.company;
+
+import org.junit.Test;
+
+import static junit.framework.TestCase.assertEquals;
+
+public class NumberTranslationTest {
+    @Test
+    public void testNumbers()
+    {
+        NumberTranslator t1= new NumberTranslator();
+        String actual_result= t1.translateNumber(1);
+        String expected_result="one";
+        assertEquals(expected_result,actual_result);
+
+        actual_result=t1.translateNumber(2);
+        expected_result="two";
+        assertEquals(expected_result,actual_result);
+
+        actual_result=t1.translateNumber(3);
+        expected_result="three";
+        assertEquals(expected_result,actual_result);
+
+        actual_result=t1.translateNumber(4);
+        expected_result="four";
+        assertEquals(expected_result,actual_result);
+
+        actual_result=t1.translateNumber(5);
+        expected_result="five";
+        assertEquals(expected_result,actual_result);
+    }
+}
