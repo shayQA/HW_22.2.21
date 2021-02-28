@@ -1,0 +1,28 @@
+package com.company;
+import java.util.Date;
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+
+        Animal [] animalArray= new Animal[2];
+        Dog d1= new Dog("Lucki");
+        animalArray[0]=d1;
+        Cat c1= new Cat("Mizi");
+        animalArray[1]=c1;
+        for(int i=0;i<2;i++)
+            makeSound(animalArray[i]);
+    }
+    private static void makeSound(Animal a)
+    {
+        if(a instanceof Dog)
+        {
+            ((Dog) a).bark();
+        }
+        if(a instanceof Cat)
+        {
+            ((Cat) a).miauu();
+        }
+
+    }
+}
